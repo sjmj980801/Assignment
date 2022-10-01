@@ -23,23 +23,28 @@
 
 
 
-          <%   if (title == "About") { %>
+          <%   if (title == "About me") { %>
         <li class="nav item active">
        
        <%  } else {    %>
 
         <li class="nav-item">
         <%    }    %>
-          <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-circle-info"></i>About</a>
+          <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-circle-info"></i>About me</a>
+          
         </li>
 
 
 
+       <% if(title == "Products") { %>
+        <li class="nav-item active">
 
-        <li class="nav-item">
+         <%    }  else  { %>
+         <li class="nav-item">
 
-         <%    }    %>
+        <%  } %>
           <a class="nav-link" aria-current="page" href="/products">Products</a>
+          
         </li>
 
 
@@ -60,7 +65,7 @@
 
 
 
-       <%   if (title == "Contact") { %>
+       <%   if (title == "Contact me") { %>
         <li class="nav item active">
        
        <%  } else {    %>
@@ -68,7 +73,7 @@
         <li class="nav-item">
 
          <%    }    %>
-          <a class="nav-link" aria-current="page" href="/contact"><i class="fa-regular fa-phone-rotary"></i>Contact</a>
+          <a class="nav-link" aria-current="page" href="/contact"><i class="fa-regular fa-phone-rotary"></i>Contact me</a>
         </li>
        
        

@@ -1,21 +1,77 @@
 
-  
+
 <%- include ('partials/header.ejs') %>
 
 
 
-
-
-
-
-
-
+<%- include('partials/main_nav.ejs') %>
 
 <!-- Main Content -->
 <main class="container">
 <div class="jumbotron">
+
+   <%   if (title == "About me")  {  %>
+   <h1 class="display-4">   Welcome to the <%= title %> page </h1>
+
+    <img width="200" height="150" src="/Assets/images/Sejin.jpg"/>
+    <h5> Hi I am Sejin Jung. I am from South korea and learing about programming in centennial college. Nice to meet you</h5>
+   
+   
+   
+   <% } else if  (title == "Products") {  %>
+
+     <h1 class="display-4">   Welcome to the <%= title %> page </h1>
+      <img width="200" height="150" src="/Assets/images/project1.jpg"/>
+      <h6>I am now curretly working on software design. Our project is about tutoring system. My role is to make diagrams for this project</h6>
+     
+      <br><img width="100" height="100" src="/Assets/images/project2.jpg"/><br>
+      <h6>I am now currently working on web application project. My role is to build a website.</h6><br>
+     <img width="100" height="100" src="/Assets/images/project3.jpg"/><br>
+     <h6>This was a project to find out the problem of ecentennial system my role was to make a usecase diagram, user stories and other stuffs</h6>
+    <input type="button" value="my resume" onclick="location.href='file:///C:/Users/%EC%A0%95%EC%84%B8%EC%A7%84/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Resume.pdf';" />
+   
+
+
+   <% } else if  (title == "Services") {  %>
+   <h1 class="display-4">   Welcome to the <%= title %> page </h1>
+   <img width="200" height="150" src="/Assets/images/java.png"/><br>
+   <h6>we have a java service</h6><br>
+   <img width="200" height="150" src="/Assets/images/database.jpg"/><br>
+   <h6>We also provide database services</h6>
+
+  <% } else if (title == "Contact me")  { %>
 <h1 class="display-4">   Welcome to the <%= title %> page </h1>
- 
+
+  <table>
+<tr>
+<td>Contact number: </td>
+<td>416 917 9381</td>
+</tr>
+
+
+<tr>
+<td>Email</td>
+<td>jackwww929@gmail.com</td>
+</tr>
+</table>
+</div>
+</body>
+
+
+
+
+         <% }  else  {    %>
+
+<h1 class="display-4">   Welcome to the <%= title %> page </h1>
+        
+        <%    }    %>
+
+
+  
+
+
+   
+
  </div>
 </main>
   
