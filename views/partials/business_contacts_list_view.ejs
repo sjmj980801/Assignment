@@ -1,0 +1,32 @@
+
+<h1>Business Contacts List View</h1>
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Contact Number</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% for(var i=0; i < users.length; i++) { %>
+            <tr>
+              <td><%= i+1 %></td>
+              <td><%= users[i].username %></td>
+              <td><%= users[i].email %></td>
+              <td><%= users[i].number %></td>
+              <td><a class="btn btn-outline-primary btn-sm" href="/users/update/<%= users[i].email %>">Update</a></td>
+              <td><a class="btn btn-outline-danger btn-sm" href="/users/delete/<%= users[i].email %>">Delete</a></td>
+            </tr>
+         <% } %>
+       
+      </tbody>
+   
+    </table>
+
+    <a href="/logout" class="btn btn-danger">Log Out</a>
+

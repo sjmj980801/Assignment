@@ -1,0 +1,19 @@
+<form action="/users/update/<%= user.email %> " method="post" >
+    <div class="form-group">
+      <label for="uname">Username</label>
+      <input type="text" class="form-control" name="username" id="uname" placeholder="Enter username" required value="<%= user.username %>">
+    
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" value="<%= user.email %>" class="form-control" name="email" id="email" placeholder="Enter email" required>
+      
+      </div>
+    <div class="form-group">
+      <label for="number">Contact Number</label>
+      <input type="tel" value="<%= user.number %>" class="form-control" name="number" id="number" placeholder="number" required>
+    </div>
+   
+    <input type="submit" class="btn btn-primary  mt-1" value="Save"></input>
+  </form>
